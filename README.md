@@ -1,4 +1,4 @@
-# tfmod_acm
+# terraform_acm
 
 Terraform module to create ACM certificates with email validation.
 
@@ -17,7 +17,7 @@ region: Region in which the certificate should be created
 # Certificates
 ######################
 module "acm_example" {
-  source   = "github.com/virsas/tfmod_acm"
+  source   = "github.com/virsas/terraform_acm"
   domain   = "example.com"
   altnames = [ "*.example.com", "example.org", "*.example.org" ]
   region   = "us-east-1"
