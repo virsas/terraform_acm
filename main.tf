@@ -8,11 +8,11 @@ resource "aws_acm_certificate" "acm" {
   validation_method         = "DNS"
 
   lifecycle {
-    ignore_changes = all
+    create_before_destroy = true
   }
 }
 
-resource "aws_route53_record" "example" {
+resource "aws_route53_record" "acm_records" {
   for_each = {
     for dvo in aws_acm_certificate.acm.domain_validation_options : dvo.domain_name => {
       name   = dvo.resource_record_name

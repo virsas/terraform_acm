@@ -1,6 +1,6 @@
 # terraform_acm
 
-Terraform module to create ACM certificates with email validation.
+Terraform module to create ACM certificates with dns validation.
 
 ## Variables
 
