@@ -21,5 +21,6 @@ module "acm_example" {
   domain   = "example.com"
   altnames = [ "*.example.com", "example.org", "*.example.org" ]
   region   = "us-east-1"
+  zone     = module.route53_example_org.zone_id
 }
 ```
