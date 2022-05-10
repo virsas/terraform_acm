@@ -1,6 +1,6 @@
 # terraform_acm
 
-Terraform module to create ACM certificates with dns validation.
+Terraform module to create ACM certificates with email validation.
 
 ## Variables
 
@@ -21,6 +21,5 @@ module "acm_example" {
   domain   = "example.com"
   altnames = [ "*.example.com", "example.org", "*.example.org" ]
   region   = "us-east-1"
-  zone     = module.route53_example_org.zone_id
 }
 ```
